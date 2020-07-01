@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 1</title>
+    <style>
+        form,h4{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h4>Question 1: Develop a page that can insert all data related to a student profile with proper validation in php and javascript and show the result in another page</h4>
+    <a href="index.html">go to home</a>
+    
+    <form action="page1Solution.php" method="post">
+        <label>Your Full Name: </label>
+        <input type="text" name="name" placeholder="Insert your Name" required><br><br>
+
+        <label>Birth Date: </label>
+        <input type="date" name="birthDate" required><br><br>
+
+        <label>Gender:</label>
+        <input type="radio" name="gender" value="Male">Male
+        <input type="radio" name="gender" value="Female">Female
+        <input type="radio" name="gender" value="Other">Other<br><br>
+
+        <label>Your Father's name: </label>
+        <input type="text" name="father" placeholder="Insert Father's Name" required><br><br>
+
+        <label>Your Mother's name: </label>
+        <input type="text" name="mother" placeholder="Insert Mother's Name" required><br><br>
+
+        <label>Your Email:</label>
+        <input type="email" name="email" placeholder="Insert your Email" required><br><br>
+
+        <label>Phone Number: </label>
+        <input type="text" name="phoneNumber" placeholder="Insert your phone number" required><br><br>
+
+        <label>Your Institution Name: </label>
+        <input type="text" name="Uni" placeholder="Insert Institution name" required><br><br>
+
+        <label>Your department name: </label>
+        <select name="dept">
+            <option>CSE</option>
+            <option>EEE</option>
+            <option>ESE</option>
+            <option>Stat</option>
+        </select><br><br>
+
+        <label>Your Session: </label>
+        <select name="session">
+            <option>2015-16</option>
+            <option>2016-17</option>
+            <option>2017-18</option>
+            <option>2018-19</option>
+            <option>2019-20</option>
+        </select><br><br>
+
+        <label>Your Roll: </label>
+        <input type="number" name="roll" placeholder="Insert Your Roll" required><br><br>
+
+        <label>Your Current Position: </label>
+        <select name="year">
+            <option>1st year</option>
+            <option>2nd year</option>
+            <option>3rd year</option>
+            <option>4th year</option>
+        </select>
+        <select name="semester">
+            <option>1st Semester</option>
+            <option>2nd Semester</option>
+        </select><br><br>
+
+        <input type="submit" name="submit">
+
+    </form>
+</body>
+</html>

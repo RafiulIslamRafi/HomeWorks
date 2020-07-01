@@ -1,0 +1,39 @@
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #DCDEF8;
+}
+.container {
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #86D7DA;
+}
+.Header{
+    text-align: center;
+    color: white;
+    margin-top: 2px;
+    margin-bottom: 5px;
+    padding: 2px;
+    background-color: rgb(99, 66, 66);
+}
+.row {
+    margin-right: 0px;
+    margin-left: 0px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border: black 1px solid;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    text-decoration: none;
+    color: white;
+    background-color: brown;
+    transition: 0.1s;
+}
