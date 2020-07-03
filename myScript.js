@@ -86,15 +86,13 @@ function isValidEmail(email){
     if(len==0){
         //return true; //for part time.
         alert("You Must include your email");
-        return false;
+        //return false;
     }
     while(i<len){
         if(email[i]=='@')
         {
             if(cnt==0 || atGot==1){
                 Alert = true;
-                alert("You must use @ sign in one time");
-                return false;
             }
             cnt = -1;
             atGot = 1;
@@ -105,8 +103,6 @@ function isValidEmail(email){
                 if(cnt==0 || dotGot==1)
                 {
                     Alert = true;
-                    alert("You must use '.' (dot) sign in one time after the '@' sign");
-                    return false;
                 }
                 cnt = -1;
                 dotGot = 1;
