@@ -31,10 +31,10 @@ function validateForm() {
 function isName(name,place){
     var len = name.length;
     //pore comment remove kore dibo.
-    // if(len==0){
-    //     alert("You need to insert data in "+ place+" section");
-    //     return false;
-    // }
+    if(len==0){
+        alert("You need to insert data in "+ place+" section");
+        return false;
+    }
     for(var i=0;i<len;i++){
         if((name[i]>='A' && name[i]<='Z') ||  (name[i]>='a' && name[i]<='z') || (name[i]=='.') || name[i]==' ') continue;
         else
@@ -49,7 +49,7 @@ function isName(name,place){
 function isValidBirthDate(birthDate){
     if(birthDate=="") 
     {
-        return true; //for a part time.
+        //return true; //for a part time.
         alert("You must insert your birth date");
         return false;
     }
@@ -126,7 +126,7 @@ function isValidEmail(email){
         cnt++;
     }
     if(Alert==true || atGot==0 || dotGot==0 || cnt==0){
-        alert("Email type is Invalid");
+        //alert("Email type is Invalid");
         return false;
     }
     return true;
@@ -135,7 +135,7 @@ function isCorrectPhoneNumber(phoneNumber){
     var len = phoneNumber.length;
     var i = 0;
     if(len==0){
-        return true; //for part time.
+        //return true; //for part time.
         alert("You Must include your phone number");
         return false;
     }
@@ -170,7 +170,7 @@ function isRollValid(roll){
     var i = 0, len = roll.length;
     var num;
     if(len==0){
-        return true; //for a part time.
+        //return true; //for a part time.
         alert("Your must input your roll number");
         return false;
     }
