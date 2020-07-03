@@ -31,16 +31,16 @@ function validateForm() {
 function isName(name,place){
     var len = name.length;
     //pore comment remove kore dibo.
-    if(len==0){
-        alert("You need to insert data in "+ place+" section");
-        return false;
-    }
+    // if(len==0){
+    //     alert("You need to insert data in "+ place+" section");
+    //     return false;
+    // }
     for(var i=0;i<len;i++){
         if((name[i]>='A' && name[i]<='Z') ||  (name[i]>='a' && name[i]<='z') || (name[i]=='.') || name[i]==' ') continue;
         else
         {
             //any type of worng
-            alert(name[i]+" is not a valid character in "+name+" in "+place+" section");
+            alert(name[i]+" is not a valid character in "+name+" at "+place+" section");
             return false;
         }
     }
@@ -49,7 +49,7 @@ function isName(name,place){
 function isValidBirthDate(birthDate){
     if(birthDate=="") 
     {
-        //return true; //for a part time.
+        return true; //for a part time.
         alert("You must insert your birth date");
         return false;
     }
@@ -59,7 +59,7 @@ function isValidBirthDate(birthDate){
     var cDate = current_time.getDate(), cMonth = current_time.getMonth() + 1, cYear = current_time.getFullYear();
     //future check.
     if(bYear>cYear || (bYear==cYear && bMonth>cMonth) || (bYear==cYear && bMonth==cMonth && bDate>cDate)){
-        alert("Hey, its future time");
+        alert("Hey, its future time in your birthday section");
         return false;
     }
     //min 10 year.
@@ -93,7 +93,8 @@ function isValidEmail(email){
         {
             if(cnt==0 || atGot==1){
                 Alert = true;
-                break;
+                alert("You must use @ sign in one time");
+                return false;
             }
             cnt = -1;
             atGot = 1;
@@ -104,17 +105,28 @@ function isValidEmail(email){
                 if(cnt==0 || dotGot==1)
                 {
                     Alert = true;
-                    break;
+                    alert("You must use '.' (dot) sign in one time after the '@' sign");
+                    return false;
                 }
                 cnt = -1;
                 dotGot = 1;
             }
         }
+        if((email[i]>='A' && email[i]<='Z') ||  (email[i]>='a' && email[i]<='z') || ('0' <= email[i] && email[i] <= '9') || email[i]=='.' || email[i]=='@' || email[i]=='_') {
+            //nothing.
+            //console.log(email[i]); //why space is working here.
+        }
+        else{
+            var char = email[i];
+            if(char==' ') char = "Space";
+            alert(char+" is not allowed in 'Your Email' Section\nYou must use only this character: Capital latter, Small latters, digit, dot(.), @ and underscore(_).");
+            return false;
+        }
         i++;
         cnt++;
     }
     if(Alert==true || atGot==0 || dotGot==0 || cnt==0){
-        alert("Correct Your Email");
+        alert("Email type is Invalid");
         return false;
     }
     return true;
@@ -123,13 +135,25 @@ function isCorrectPhoneNumber(phoneNumber){
     var len = phoneNumber.length;
     var i = 0;
     if(len==0){
-        //return true; //for part time.
+        return true; //for part time.
         alert("You Must include your phone number");
         return false;
     }
     if(len!=11 && len!=14) {
-        alert("Incorrect Number of digit");
+        alert("Incorrect Number of digit of Your Phone number");
         return false;
+    }
+    if(len==11){
+        if(phoneNumber[0]!='0' || phoneNumber[1]!='1'){
+            alert("You must start by 01 of your Phone Number");
+            return false;
+        }
+    }
+    if(len==14){
+        if(phoneNumber[0]!='+' || phoneNumber[1]!='8' || phoneNumber[2]!='8' || phoneNumber[3]!='0' || phoneNumber[4]!='1'){
+            alert("You must start by +8801 of your Phone Number");
+            return false;
+        }
     }
     while(i<len){
         if((i==0 && phoneNumber[i]=='+') || (0<=phoneNumber[i] && phoneNumber[i]<=9)){
@@ -146,7 +170,7 @@ function isRollValid(roll){
     var i = 0, len = roll.length;
     var num;
     if(len==0){
-        //return true; //for a part time.
+        return true; //for a part time.
         alert("Your must input your roll number");
         return false;
     }
