@@ -1,4 +1,4 @@
-# HomeWorks
+# HomeWorks - ## Mainly these homeWorks is given by Tushar sir of Our dept and i am trying to solve those
 ### Welcome to My HomeWorks
 *  Currently I used HTML+CSS+Bootstrap for only index page. (It is also Responsive now.)
 *  Solution font-end page: HTML + JavaScript (will upadate with CSS + BootStrap + another)
