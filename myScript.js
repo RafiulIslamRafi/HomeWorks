@@ -126,7 +126,7 @@ function isValidEmail(email){
         cnt++;
     }
     if(Alert==true || atGot==0 || dotGot==0 || cnt==0){
-        //alert("Email type is Invalid");
+        alert("Email type is Invalid");
         return false;
     }
     return true;
