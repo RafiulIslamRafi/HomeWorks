@@ -1,4 +1,4 @@
-# HomeWorks - (Mainly these homeWorks is given by Tushar sir of Our dept and i am trying to solve those)
+# HomeWorks - (Mainly these homeWorks are given to us by Tushar sir of Our dept and I am trying to solve those)
 ### Welcome to My HomeWorks
 *  Some question is given with a pdf from our teacher, I made a index page with those question.
 *  I used HTML+CSS+Bootstrap for only index page. (It is also Responsive now.)
