@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 3</title>
+    <style>
+        div{
+            text-align: center;
+        }
+        #click{
+            font-size: 100px;
+        }
+        a{
+            text-decoration: none;
+        }
+    </style>
+    <script>
+        function myFunction(){
+            document.getElementById('click').innerHTML='Hello World';
+        }
+    </script>
+</head>
+<body>
+    <a href="index.html">go to home</a>
+    <div>
+        <h4>Question 3: Write a program using DHTML/Javascript to show a message “Hello World” with respect to Onmouseover, Onclick and Onkeypress events of HTML elements</h4>
+        <button onclick="document.getElementById('click').innerHTML='Hello World'" class="m">Onclick</button>
+        <span onmouseover="document.getElementById('click').innerHTML='Hello World'" style="border: 1px saddlebrown solid;">OnMouseover</span>
+        <input type="text" onkeypress="myFunction()" placeholder="Put Cursor & Press key">
+
+        <div><br>Output will show in the next line: (Output in a single place for all)</div>
+        <div id="click"></div>
+    </div>
+</body>
+</html>
