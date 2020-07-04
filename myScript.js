@@ -86,7 +86,7 @@ function isValidEmail(email){
     if(len==0){
         //return true; //for part time.
         alert("You Must include your email");
-        //return false;
+        return false;
     }
     while(i<len){
         if(email[i]=='@')
