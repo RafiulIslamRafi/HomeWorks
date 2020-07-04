@@ -18,7 +18,7 @@
     <div>
         <h3>Question 2: Write a program to insert product profile into the database and show the list into another page</h3>
         <h4>Insert your all Data about your product:</h4>
-        <form action="page2Output.php" method="post">
+        <form action="page2.php" method="post">
             <label>Product Name: </label>
             <input type="text" name="Product"><br><br>
 
