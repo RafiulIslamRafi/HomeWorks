@@ -16,6 +16,7 @@
             position: relative;
             border: black 1px solid;
             width: 100%;
+            overflow: hidden;
             padding-right: 15px;
             padding-left: 15px;
         }
