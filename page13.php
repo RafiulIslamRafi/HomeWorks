@@ -26,14 +26,17 @@
     <a href="page13.php">Refresh</a>
     <h4>Question 13: Develop an image gallery which can show the image and also upload the image with the title</h4>
     <div class="container">
+        <?php
+            $directory = "Uploaded13/";
+            $idx = 2;
+            $str = 0;
+            $photoes = scandir($directory);
+            $len = count($photoes) - $idx;
+            if($len!=0) echo "<br><h1>Gallery</h1><br>";
+        ?>
         <div class="row">
             <?php
-                $directory = "Uploaded13/";
-                $idx = 2;
-                $str = 0;
-                $photoes = scandir($directory);
-                $len = count($photoes) - $idx;
-                for($i=0;$i<$len;$i++) echo "<div class=\"col-4\"> <img src=\"Uploaded13/" . $photoes[$i+$idx] . "\"></div>";
+                for($i=0;$i<$len;$i++) echo "<div class=\"col-sm-4\"> <img src=\"Uploaded13/" . $photoes[$i+$idx] . "\"></div>";
             ?>
         </div>
     </div>
@@ -56,7 +59,7 @@
 
                 $directory = "Uploaded13/" . $file_name; //kothay r ki name e save hobe seta.
                 if (move_uploaded_file($_FILES["image"]["tmp_name"], $directory)) { // first parameter ta only image, 2nd ta (name shoho directory) te save kore.
-                    echo "The file ". basename( $_FILES["image"]["name"]). " has been uploaded in " . $directory;
+                    echo "The Photo has been uploaded"; //in " . $directory;
                 }
             } 
             else echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
