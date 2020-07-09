@@ -19,6 +19,7 @@
             position: relative;
             padding-right: 15px;
             padding-left: 15px;
+            word-wrap: break-word; 
         }
         .row {
             display: flex;
