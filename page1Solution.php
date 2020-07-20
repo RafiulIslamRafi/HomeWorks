@@ -102,36 +102,10 @@
             <div class="col-xs-6">Your Email</div>
             <div class="col-xs-6">
                 <?php 
-                    function isValidEmail($email){
-                        $cnt = 0; $i=0; $len = strlen($email); $atGot = 0; $dotGot = 0; $Alert = false;
-                        if($len==0) return false;
-                        while($i<$len){
-                            if($email[$i]=='@')
-                            {
-                                if($cnt==0 || $atGot==1) $Alert = true;
-                                $cnt = -1;
-                                $atGot = 1;
-                            }
-                            else if($atGot==1){
-                                if($email[$i]=='.')
-                                {
-                                    if($cnt==0 || $dotGot==1) $Alert = true;
-                                    $cnt = -1;
-                                    $dotGot = 1;
-                                }
-                            }
-                            if(($email[$i]>='A' && $email[$i]<='Z') ||  ($email[$i]>='a' && $email[$i]<='z') || ('0' <= $email[i] && $email[i] <= '9') || $email[i]=='.' || $email[i]=='@' || $email[i]=='_') {
-                                //not to do.
-                            }
-                            else return false;
-                            $i++;
-                            $cnt++;
-                        }
-                        if($Alert==true || $atGot==0 || $dotGot==0 || $cnt==0) return false;
-                        return true;
+                    if (!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
+                        echo "Invalid email format";
                     }
-                    if(isValidEmail($_POST["email"])) echo $_POST["email"]; 
-                    else echo "Invalid";
+                    else echo $_POST["email"];
                 ?>
             </div>
         </div>

@@ -16,7 +16,7 @@
 	<a href="page22.php">refresh</a>
 	<div class="container">
 	<h2>Problem 22: Develop a web page that can save all data from your current semester in a database and show the result in another page in tabular form. The result will be calculated as GPA. Show proper validation of input data.</h2>
-	
+	<br><h2>Validatin baki ace</h2>
 	<?php
 		$connection = mysqli_connect("127.0.0.1","root","","test");
 		$query = "SELECT Count(ID) from page22";
