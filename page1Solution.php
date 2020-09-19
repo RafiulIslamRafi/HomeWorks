@@ -24,11 +24,9 @@
             <div class="col-xs-6">
                 <?php 
                     function isName($nm){
-                        $len = strlen($nm);
-                        if($len==0)return "";
-                        for($i=0; $i<$len; $i++){
-                            if(($nm[$i]>='A' && $nm[$i]<='Z') ||  ($nm[$i]>='a' && $nm[$i]<='z') || ($nm[$i]=='.') || $nm[$i]==' ') continue;
-                            else return "";
+                        $name = $nm;
+                        if (!preg_match("/^[a-zA-Z .]*$/",$name)) {
+                            return "Only letters, white space and dot are allowed";
                         }
                         return $nm;
                     }
