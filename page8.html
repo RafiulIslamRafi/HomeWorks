@@ -4,32 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <title>Question 9</title>
+    <title>Question 8</title>
     <style>
         form,h4,h1,h3{
             text-align: center;
         }
     </style>
+    <script src="myScript.js"></script>
 </head>
 <body>
     <a href="index.html">go to home</a>
-    <h4>Question 9: Write a PHP program that will validate all data retrieving from a form containing employee’s profile</h4>
+    <h4>Question 8: Design a DHTML’s form for employee’s profile and validate all data retrieving from a form using JavaScript</h4>
     <div class="container">
-        <br><form action="page9.php" method="post">
+        <br><form name="myForm" onsubmit="return validateForm()" action="done.php" method="post">
             <label>Full Name: </label><br>
             <input type="text" name="name" placeholder="Name" required><br><br>
             <label>Title: </label><br>
             <input type="text" name="title" placeholder="title"><br><br>
             <label>Birth Date: </label><br>
-            <input type="date" name="bdate" ><br><br>
+            <input type="date" name="birthDate" ><br><br>
             <label>Hired Date: </label><br>
             <input type="date" name="hdate" ><br><br>
             <label>Phone Number: </label><br>
-            <input type="number" name="phone" placeholder="Phone Number" ><br><br>
+            <input type="number" name="phoneNumber" placeholder="Phone Number" ><br><br>
             <label>Home Address: </label><br>
             <textarea type="text" name="address" placeholder="Home Address" ></textarea><br><br>
             <label>Notes: </label><br>
-            <textarea type="text" name="name" placeholder="Notes" ></textarea><br><br>
+            <textarea type="text" name="Notes" placeholder="Notes" ></textarea><br><br>
             <input type="submit" name="submitted">
         </form>
     </div>
