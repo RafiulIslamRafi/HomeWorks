@@ -44,7 +44,7 @@
 					$username = $row[1];
 					$phone = $row[3];
 					$email = $row[4];
-					echo "<h1> Hellow, ". $name . "</h1>";
+					echo "<h1> Hellow, ". $name . "( (".$username.")</h1>";
 				}
 			?>
 		</div>

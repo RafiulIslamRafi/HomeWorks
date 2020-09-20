@@ -15,12 +15,12 @@
 		$query = "CREATE TABLE IF NOT EXISTS page10
 		(
 			id int NOT NULL AUTO_INCREMENT,
-			username varchar(30),
+			username varchar(30) NOT NULL,
 			name varchar(30),
 			phone varchar(20),
 			email varchar(30),
 			pass varchar(20),
-			primary key(username,id)
+			primary key(id)
 		)";
 		mysqli_query($connection, $query);
 
@@ -38,8 +38,8 @@
 			$phone = $_REQUEST['phone'];
 			$email = $_REQUEST['email'];
 			$pass = $_REQUEST['cpassword'];
-			$query = "INSERT INTO page10
-				values(NULL, '$username','$name','$phone','$email', '$pass')
+			$query = "INSERT INTO page10 (username, name, phone, email, pass)
+				values('$username','$name','$phone','$email', '$pass')
 			";
 			mysqli_query($connection, $query);
 			$_SESSION['logged'] = mysqli_insert_id($connection);
